@@ -1,4 +1,3 @@
-
 - name: Virutal Machine - Snapshot, Shutdown, Upgrade Hardware, verify, Power on
   hosts: localhost
   gather_facts: no
