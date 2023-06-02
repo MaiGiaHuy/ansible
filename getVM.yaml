@@ -2,7 +2,7 @@
   hosts: localhost
   gather_facts: no
   collections:
-    - community.vmware
+- name: community.vmware
   tasks:
     - name: Gather all registered virtual machines
         hostname: vc3.svt.local
