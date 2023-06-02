@@ -5,9 +5,9 @@
   tasks:
     - name: Gather all registered virtual machines
       community.vmware.vmware_vm_info:
-        hostname: '{{ secret.hostname }}'
-        username: '{{ secret.username }}'
-        password: '{{ secret.password }}'
+        hostname: vc3.svt.local
+        username: administrator@vsphere.local
+        password: P@ssw0rdSVT
         vm_type: vm
         validate_certs: no
       delegate_to: localhost
