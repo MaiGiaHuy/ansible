@@ -5,7 +5,6 @@
     - community.vmware
   tasks:
     - name: Gather all registered virtual machines
-      community.vmware.vmware_vm_info:
         hostname: vc3.svt.local
         username: administrator@vsphere.local
         password: P@ssw0rdSVT
