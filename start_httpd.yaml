@@ -1,0 +1,32 @@
+---
+- hosts: "{{ network_ip }}"
+  gather_facts: yes
+  become: true
+  tasks:
+    - name: stop webserver
+      ignore_errors: true
+      service:
+        name: httpd
+        state: stopped
+    - name: uninstall httpd
+      yum:
+        name: "httpd"
+        state: absent
+    - name: Install httpd
+      yum:
+        name: httpd
+        state: present
+    - name: Ensure httpd is running
+      service:
+        name: httpd
+        state: started
+    - name: copy index
+      copy:
+        src: files/index.html
+        dest: /var/www/html/index.html
+Footer
+© 2023 GitHub, Inc.
+Footer navigation
+Terms
+Privacy
+Security
