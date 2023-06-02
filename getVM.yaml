@@ -7,7 +7,7 @@
     - name: Gather all registered virtual machines
       community.vmware.vmware_vm_info:
         hostname: vc3.svt.local
-        username: administrator@vsphere.local
+        username: root
         password: P@ssw0rdSVT
         vm_type: vm
         validate_certs: no
