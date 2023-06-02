@@ -8,16 +8,6 @@
   pre_tasks:
       - include_vars: vars.yml
   tasks:
-      - name: create folder
-        vcenter_folder:
-          hostname: vc3.svt.local
-          username: administrator@vsphere.local
-          password: P@ssw0rdSVT
-          validate_certs: false
-          datacenter_name: Datacenter
-          folder_name: myvm
-          folder_type: vm
-          state: present
       - name: create VM
         vmware_guest:
           hostname: vc3.svt.local
