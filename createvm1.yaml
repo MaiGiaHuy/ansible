@@ -1,6 +1,6 @@
 ---
 - name: create vm
-  hosts: vc3
+  hosts: localhost
   become: false
   gather_facts: false
   collections:
