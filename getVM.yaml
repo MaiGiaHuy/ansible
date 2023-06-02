@@ -1,6 +1,8 @@
 - name: Virutal Machine - Snapshot, Shutdown, Upgrade Hardware, verify, Power on
   hosts: localhost
   gather_facts: no
+  collections:
+    - community.vmware
   tasks:
     - name: Gather all registered virtual machines
       community.vmware.vmware_vm_info:
