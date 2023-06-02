@@ -1,10 +1,11 @@
+---
 - name: Virutal Machine - Snapshot, Shutdown, Upgrade Hardware, verify, Power on
   hosts: localhost
   gather_facts: no
-  collections:
-  - name: community.vmware
+
   tasks:
     - name: Gather all registered virtual machines
+      community.vmware.vmware_vm_info:
         hostname: vc3.svt.local
         username: administrator@vsphere.local
         password: P@ssw0rdSVT
@@ -12,5 +13,6 @@
         validate_certs: no
       delegate_to: localhost
       register: vminfo
+
     - debug:
         var: vminfo
