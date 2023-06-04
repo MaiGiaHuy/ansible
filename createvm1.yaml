@@ -20,7 +20,7 @@
           template: wintemplate
           cluster: Cluster 3
           disk: 
-            - size_gb: 5
+            - size_gb: 40
               type: thin
               datastore: 23.15 localDS
           hardware:
