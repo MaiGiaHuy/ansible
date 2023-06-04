@@ -16,7 +16,8 @@
           name: myvm
           folder: myvm
           state: poweroff
-          guest_id: testvm
+          guest_id: wintemplate
+          template: wintemplate
           cluster: Cluster 3
           disk: 
             - size_gb: 5
