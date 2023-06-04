@@ -15,7 +15,7 @@
           datacenter: Datacenter
           name: myvm
           folder: myvm
-          state: rebuilt
+          state: poweredoff
           guest_id: wintemplate
           template: wintemplate
           cluster: Cluster 3
