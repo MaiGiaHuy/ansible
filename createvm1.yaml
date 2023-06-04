@@ -16,7 +16,6 @@
           name: myvm
           folder: myvm
           state: poweredoff
-          guest_id: wintemplate
           template: wintemplate
           cluster: Cluster 3
           disk: 
