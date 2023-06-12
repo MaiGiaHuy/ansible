@@ -1,5 +1,8 @@
 ---
 - name: Create Cluster
+  hosts: localhosts
+  become: false
+  gather_facts: false
   pre_task:
     - include_vars: var.yml
   community.vmware.vmware_cluster:
