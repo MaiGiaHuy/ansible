@@ -13,7 +13,7 @@
           password: P@ssw0rdSVT
           validate_certs: false
           datacenter: Datacenter
-          name: myvm
+          name: myvm1
           folder: myvm
           state: poweredoff
           template: wintemplate
