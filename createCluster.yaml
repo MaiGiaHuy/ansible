@@ -3,12 +3,17 @@
   hosts: localhosts
   become: false
   gather_facts: false
+  collections:
+    - community.vmware
   pre_task:
     - include_vars: var.yml
-  community.vmware.vmware_cluster:
-    hostname: '{{ vcenter_hostname }}'
-    username: '{{ vcenter_username }}'
-    password: '{{ vcenter_password }}'
-    datacenter_name: datacenter
-    cluster_name: cluster
-  delegate_to: localhost
+  tasks:
+    - name: create cluster
+      community.vmware.vmware_cluster:
+        hostname: '{{ vcenter_hostname }}'
+        username: '{{ vcenter_username }}'
+        password: '{{ vcenter_password }}'
+        datacenter_name: datacenter
+        cluster_name: cluster
+      delegate_to: localhost
+  
