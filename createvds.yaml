@@ -10,10 +10,10 @@
   tasks:
       - name: Create dvSwitch
         community.vmware.vmware_dvswitch:
-          hostname: '{{ vcenter_hostname }}'
-          username: '{{ vcenter_username }}'
-          password: '{{ vcenter_password }}'
-          datacenter: '{{ datacenter }}'
+          hostname: vc3.svt.local
+          username: administrator@vsphere.local
+          password: P@ssw0rdSVT
+          datacenter: Datacenter
           switch: dvSwitch
           version: 7.0.0
           mtu: 9000
@@ -21,5 +21,5 @@
           discovery_protocol: lldp
           discovery_operation: both
           state: present
-        delegate_to: localhost
+        
   
