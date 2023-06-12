@@ -1,5 +1,5 @@
 ---
-- name: Create Cluster
+- name: Create dvsSwitch
   hosts: localhosts
   become: false
   gather_facts: false
@@ -8,12 +8,18 @@
   pre_tasks:
     - include_vars: var.yml
   tasks:
-    - name: create cluster
-      community.vmware.vmware_cluster:
-        hostname: '{{ vcenter_hostname }}'
-        username: '{{ vcenter_username }}'
-        password: '{{ vcenter_password }}'
-        datacenter_name: Datacenter
-        cluster_name: cluster
-      delegate_to: localhost
+      - name: Create dvSwitch
+        community.vmware.vmware_dvswitch:
+          hostname: '{{ vcenter_hostname }}'
+          username: '{{ vcenter_username }}'
+          password: '{{ vcenter_password }}'
+          datacenter: '{{ datacenter }}'
+          switch: dvSwitch
+          version: 6.0.0
+          mtu: 9000
+          uplink_quantity: 2
+          discovery_protocol: lldp
+          discovery_operation: both
+          state: present
+        delegate_to: localhost
   
