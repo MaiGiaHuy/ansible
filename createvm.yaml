@@ -17,7 +17,7 @@
           folder: myvm
           state: poweredoff
           template: wintemplate
-          cluster: Cluster 3
+          cluster: Vsan 2 node
           disk: 
             - size_gb: 40
               type: thin
