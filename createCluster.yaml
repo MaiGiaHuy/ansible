@@ -1,5 +1,7 @@
 ---
 - name: Create Cluster
+  pre_task:
+    - include_vars: var.yml
   community.vmware.vmware_cluster:
     hostname: '{{ vcenter_hostname }}'
     username: '{{ vcenter_username }}'
