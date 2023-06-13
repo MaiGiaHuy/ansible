@@ -17,8 +17,8 @@
           datacenter: Datacenter
           switch: dvSwitch Test
           version: 7.0.3
-          mtu: 9000
-          uplink_quantity: 2
+          mtu: 1600
+          uplink_quantity: 4
           discovery_protocol: lldp
           discovery_operation: both
           state: present
