@@ -13,6 +13,7 @@
           hostname: vc3.svt.local
           username: administrator@vsphere.local
           password: P@ssw0rdSVT
+          validate_certs: false
           datacenter: Datacenter
           switch: dvSwitch Test
           version: 7.0.3
