@@ -1,5 +1,5 @@
 ---
-- name: Create dvsSwitch
+- name: Upgrade Esxi Host to version 7.0.3l
   hosts: localhost
   become: false
   gather_facts: false
@@ -8,18 +8,13 @@
 #  pre_tasks:
 ##    - include_vars: var.yml
   tasks:
-      - name: Create dvSwitch
-        community.vmware.vmware_dvswitch:
+      - name: Upgrade Host to 7.0.3x
+        community.vmware.vmware_host:
           hostname: vc3.svt.local
           username: administrator@vsphere.local
           password: P@ssw0rdSVT
           validate_certs: false
           datacenter: Datacenter
-          switch: dvSwitch Test
-          version: 7.0.3
-          mtu: 1600
-          uplink_quantity: 4
-          discovery_protocol: lldp
-          discovery_operation: both
-          state: present
-        delegate_to: localhost  
+          esxi_hostname: 192.168.23.14
+          esxi_username: root
+          esxi_password: P@ssw0rd
