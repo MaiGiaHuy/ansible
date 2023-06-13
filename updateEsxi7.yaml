@@ -9,10 +9,8 @@
 ##    - include_vars: var.yml
   tasks:
       - name: Upgrade Host to 7.0.3x
-        register: status
         community.vmware.vmware_maintenancemode:
 #        community.vmware.vmware_host:
-
           hostname: vc3.svt.local
           username: administrator@vsphere.local
           password: P@ssw0rdSVT
