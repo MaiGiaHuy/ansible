@@ -1,0 +1,25 @@
+---
+- name: Create dvsSwitch
+  hosts: localhost
+  become: false
+  gather_facts: false
+  collections:
+    - community.vmware
+#  pre_tasks:
+##    - include_vars: var.yml
+  tasks:
+      - name: Create dvSwitch
+        community.vmware.vmware_dvswitch:
+          hostname: vc3.svt.local
+          username: administrator@vsphere.local
+          password: P@ssw0rdSVT
+          validate_certs: false
+          datacenter: Datacenter
+          switch: dvSwitch Test
+          version: 7.0.3
+          mtu: 1600
+          uplink_quantity: 4
+          discovery_protocol: lldp
+          discovery_operation: both
+          state: present
+        delegate_to: localhost  
