@@ -21,3 +21,4 @@
           discovery_protocol: lldp
           discovery_operation: both
           state: present
+        delegate_to: localhost  
