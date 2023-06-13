@@ -20,6 +20,9 @@
           esxi_hostname: 192.168.23.14
           esxi_username: root
           esxi_password: P@ssw0rd
-          evacuate: yes
+          vsan: ensureObjectAccessibility
+          evacuate: True
           validate_certs: no
+          timeout: 3600
+          state: present
           shell: esxcli software profile update -p ESXi-7.0U3l-21424296-standard -d /vmfs/volumes/647241ae-5f3419d0-09dc-00505683937b/ISO/VMware-ESXi-7.0U3l-21424296-depot.zip
