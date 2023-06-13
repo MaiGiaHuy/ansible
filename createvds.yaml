@@ -15,7 +15,7 @@
           password: P@ssw0rdSVT
           datacenter: Datacenter
           switch: dvSwitch Test
-          version: 7.0.0
+          version: 7.0.3
           mtu: 9000
           uplink_quantity: 2
           discovery_protocol: lldp
