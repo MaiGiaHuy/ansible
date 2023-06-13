@@ -14,7 +14,7 @@
           username: administrator@vsphere.local
           password: P@ssw0rdSVT
           datacenter: Datacenter
-          switch: dvSwitch
+          switch: dvSwitch Test
           version: 7.0.0
           mtu: 9000
           uplink_quantity: 2
