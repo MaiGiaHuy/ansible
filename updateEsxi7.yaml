@@ -17,6 +17,5 @@
               vsan: ensureObjectAccessibility
               evacuate: true
               timeout: 3600
-              state: present
-            delegate_to: localhost
+
           
