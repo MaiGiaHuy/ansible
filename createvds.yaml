@@ -1,6 +1,6 @@
 ---
 - name: Create dvsSwitch
-  hosts: localhosts
+  hosts: vc3.svt.local
   become: false
   gather_facts: false
   collections:
