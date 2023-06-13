@@ -20,4 +20,4 @@
           uplink_quantity: 2
           discovery_protocol: lldp
           discovery_operation: both
-          state: present 
+          state: present
