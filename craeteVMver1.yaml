@@ -36,6 +36,7 @@
           netmask: "{{ network_netmask }}"
           gateway: "{{ network_gateway }}"
           device_type: vmxnet3
+          start_connected: True
         customization:
           dns_servers: 8.8.8.8
         wait_for_ip_address: true
