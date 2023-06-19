@@ -14,8 +14,8 @@
         datacenter: "{{ vcenter_datacenter }}"
         validate_certs: no
         resource_pool: "{{ resource_pool }}"
-        folder: /test-vm
-        name: "{{ vm_name }}"
+        folder: test-vm
+        name: VM-test
         state: poweredon
         template: "{{ template_name }}"
         esxi_hostname: "{{ esxi_hostname }}"
