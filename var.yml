@@ -1,5 +1,5 @@
 ## vmware vars
-vcenter_hostname: 10.1.17.41
+vcenter_hostname: vc3.svt.local
 vcenter_username: administrator@vsphere.local
 vcenter_password: Admin@123
 vcenter_datacenter: Datacenter
