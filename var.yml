@@ -15,6 +15,7 @@ network_name: 192.168.0.x/24
 network_ip: 192.168.0.99
 network_netmask: 255.255.255.0
 network_gateway: 192.168.0.1
+local_admin_pwd: P@ssw0rdSVT
 #network_devicetype: vmxnet3
 # networks:
 #   - name: VM Network
