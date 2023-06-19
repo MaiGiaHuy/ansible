@@ -14,7 +14,7 @@
         datacenter: "{{ vcenter_datacenter }}"
         validate_certs: no
         resource_pool: "{{ resource_pool }}"
-        folder: /test-msb
+        folder: /test-vm
         name: "{{ vm_name }}"
         state: poweredon
         template: "{{ template_name }}"
