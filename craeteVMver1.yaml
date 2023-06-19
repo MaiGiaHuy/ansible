@@ -38,7 +38,12 @@
           device_type: vmxnet3
           start_connected: True
         customization:
-          dns_servers: 8.8.8.8
+          dns_servers: 
+          - 192.168.23.20
+          - 1.1.1.1
+          password: "{{ local_admin_pwd }}"
+          runonce:
+          - powershell.exe Set-NetFirewallProfile -Enabled True
         wait_for_ip_address: true
         wait_for_ip_address_timeout: 1200
     #  loop: "{{ vms }}" 
