@@ -44,6 +44,6 @@
       delegate_to: localhost
       register: deploy
     - name: Display created virtual machine details
-    debug:
-      var: deploy
+      debug:
+        var: deploy
     
