@@ -8,7 +8,7 @@ template_name: wintemplate
 resource_pool: RS1
 esxi_hostname: 192.168.23.14
 disk:
-  - size_gb: 30
+  - size_gb: 50
     type: thin
     datastore: 23.14 localDS
 network_name: 192.168.0.x/24
