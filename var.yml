@@ -1,15 +1,19 @@
 ## vmware vars
 vcenter_hostname: vc3.svt.local
 vcenter_username: administrator@vsphere.local
-vcenter_password: Admin@123
+vcenter_password: P@ssw0rdSVT
 vcenter_datacenter: Datacenter
 #vm_name: test-msb-1
-esxi_hostname: 10.1.17.16
-resource_pool: Dung
+esxi_hostname: 192.168.23.14
+resource_pool: RS1
 disk:
   - size_gb: 30
     type: thin
-    datastore: node6-sata1
+    datastore: 23.14 localDS
+network_name: 192.168.0.x/24
+network_netmask: 255.255.255.0
+network_gateway: 192.168.0.1
+network_devicetype: vmxnet3
 # networks:
 #   - name: VM Network
 #     ip: 10.1.16.18
@@ -20,6 +24,6 @@ disk:
 #     - 8.8.8.8
 
 ## Ansible Tower
-user_ansible_tower: admin
-pass_ansible_tower: admin123
-inv_ansible_tower: test
+#user_ansible_tower: admin
+#pass_ansible_tower: admin123
+#inv_ansible_tower: test
