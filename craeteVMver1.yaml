@@ -7,7 +7,7 @@
   gather_facts: yes
   become: true
   tasks: 
-    - name: Create a virtual machine from a template
+    - name: Create a virtual machine & Enable FW & Install IIS
       community.vmware.vmware_guest:
         hostname: "{{ vcenter_hostname }}"
         username: "{{ vcenter_username }}"
