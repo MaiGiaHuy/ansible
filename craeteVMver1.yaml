@@ -38,9 +38,9 @@
           device_type: vmxnet3
           start_connected: True
         customization:
-          dns_servers: 
-          - 192.168.23.20
-          - 1.1.1.1
+          dns_servers: [192.168.23.20,8.8.8.8]
+#          - 192.168.23.20
+#          - 1.1.1.1
           password: "{{ local_admin_pwd }}"
           runonce:
           - powershell.exe Set-NetFirewallProfile -Enabled True
