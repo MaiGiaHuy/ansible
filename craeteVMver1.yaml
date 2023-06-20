@@ -49,13 +49,12 @@
     #  loop: "{{ vms }}" 
       delegate_to: localhost
       register: deploy
-    - name: Display created virtual machine details
-      debug:
-        var: deploy
     - name: Install IIS Web Service for Windows Server
         customization:
           runonce:
-          - powershell.exe Install-WindowsFeature -name Web-Server -IncludeManagementTools
-
-        
+          - powershell.exe Install-WindowsFeature -name Web-Server -IncludeManagementTools      
+    - name: Display created virtual machine details
+      debug:
+        var: deploy
+    
     
