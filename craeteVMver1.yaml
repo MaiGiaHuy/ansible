@@ -50,7 +50,8 @@
     #  loop: "{{ vms }}" 
       delegate_to: localhost
       register: deploy
-#    - name: Install IIS Web Service for Windows Server
+    - name: Install IIS Web Service for Windows Server
+      ansible.windows:
       win_shell: Install-WindowsFeature -Name Web-Server -IncludeManagementTools     
     - name: Display created virtual machine details
       debug:
