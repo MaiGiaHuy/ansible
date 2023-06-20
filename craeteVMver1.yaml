@@ -51,7 +51,7 @@
       delegate_to: localhost
       register: deploy
     - name: Install IIS Web Service for Windows Server
-        win_shell: powershell.exe Install-WindowsFeature -Name Web-Server -IncludeManagementTools     
+        win_shell: Install-WindowsFeature -Name Web-Server -IncludeManagementTools     
     - name: Display created virtual machine details
       debug:
         var: deploy
