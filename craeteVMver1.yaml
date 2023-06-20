@@ -52,7 +52,6 @@
     - name: Display created virtual machine details
       debug:
         var: deploy
-  task:
     - name: Install IIS Web Service for Windows Server
         customization:
           runonce:
