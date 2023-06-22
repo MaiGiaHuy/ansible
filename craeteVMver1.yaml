@@ -42,8 +42,8 @@
           dns_servers: [192.168.23.20,8.8.8.8]
           password: "{{ local_admin_pwd }}"
           runonce:
-          - powershell.exe Set-NetFirewallProfile -Enabled True
-          - powershell.exe Install-WindowsFeature -Name Web-Server -IncludeManagementTools 
+          - powershell.exe Set-NetFirewallProfile -Enabled True # Enable Firewall
+          - powershell.exe Install-WindowsFeature -Name Web-Server -IncludeManagementTools # Install IIS Service 
         wait_for_ip_address: true
         wait_for_ip_address_timeout: 1200
     #  loop: "{{ vms }}" 
