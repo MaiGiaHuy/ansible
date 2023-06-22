@@ -1,0 +1,15 @@
+---
+- name: Install IIS on Windows Server 2016
+  hosts: 192.168.23.99
+  gather_facts: false
+
+  tasks:
+    - name: Install IIS Web Server Role
+      win_feature:
+        name: Web-Server
+        state: present
+
+    - name: Ensure IIS Management Console is installed
+      win_feature:
+        name: Web-Mgmt-Console
+        state: present
